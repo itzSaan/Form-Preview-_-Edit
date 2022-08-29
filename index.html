@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/styles/choices.min.css" />
+    <script src="assets/scripts/choices.min.js"></script>
+</head>
+<body>
+    <div id="container" class="container">
+        <div class="btn-wrap">
+            <button id="edit" class="btn btn-cyan">Edit</button>
+            <button id="delete" class="btn btn-red">Delete</button>
+        </div>
+        
+        <div id="formWrap" class="form-wrap">
+            <!-- <form action="" id="preview"></form> -->
+            <form id="form">
+                <div class="profile-img-wrap">
+                    <img src="img/user.png" id="profileImage" alt="" class="profile-img">
+                    <button class="img-upload-btn">
+                        &#8593  upload an image
+                    </button>                   
+                    <input type="file" id="fileInput" name="profileImage" accept="image/jpeg, image/png, image/jpg" >
+                </div>
+                <h2 class="full-name">Bhavin Bhagat</h2>
+                <div class="grid-wrap">
+                    <div class="business-section">
+                        <h4 class="section-title">Business Intrests</h4>
+                        <div class="input-wrap">
+                            <div class="col col-4">
+                                <span class="label">activities</span>
+                            </div>
+                            <div class="col col-6">                                
+                               <div id="activity">
+                                <label for="buy">
+                                    <input type="checkbox" id="buy"  value="buy" name="activities">
+                                    Buy
+                                </label>
+                                <label for="invest">
+                                    <input type="checkbox" id="invest"  value="invest" name="activities">
+                                    Invest
+                                </label>
+                                <label for="partner">
+                                    <input type="checkbox" id="partner" value="partner" name="activities">
+                                     Partner
+                                </label>
+                                <label for="lease">
+                                    <input type="checkbox" id="lease" value="lease"  name="activities">
+                                    Lease
+                                </label>
+                                <label for="franchise">
+                                    <input type="checkbox" id="franchise"  value="franchise" name="activities">
+                                    Franchise
+                                </label>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="input-wrap">
+                            <div class="col col-4">
+                                <span class="label">industries</span>
+                            </div>
+                            <div class="col col-6">
+                                <div class="choices__inner">
+                                    <select class="choices__input" name="industries" id="industries" >
+                                        <option value="">Select Industry</option>
+                                        <option value="Automobile">Automobile</option>
+                                        <option value="Clothing">Clothing</option>
+                                        <option value="Food Services">Food Services</option>
+                                        <option value="Hotel & Restaurant">Hotel & Restaurants</option>
+                                        <option value="IT Services">IT Services</option>
+                                    </select>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="input-wrap">
+                            <div class="col col-4">
+                                <span class="label">Location</span>                                
+                            </div>
+                            <div class="col col-6">
+                            <select name="location" id="location" multiple >
+                                <option value="">Select locations</option>
+                                <option value="Ahmedabad">Ahmedabad</option>
+                                <option value="Bangalore">Bangalore</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Indore">Indore</option>
+                                <option value="Jaipur">Jaipur</option>
+                                <option value="Kolkata">Kolkata</option>
+                                <option value="Lucknow">Lucknow</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Pune">Pune</option>
+                            </select>
+                        </div>
+                        </div> 
+                    </div>
+                    
+                    <div class="personal-section">
+                        <h4 class="section-title">Personal</h4>
+                        <div class="input-wrap">
+                            <div class="col col-4">
+                                <span class="label">Mobile</span>                                 
+                            </div>
+                            <div class="col col-6">
+                                <div class="choices__inner">
+                                    <input type="text" id="mobile" class="choices__input" name="mobile" placeholder="Mobile Number" maxlength="10" >
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="input-wrap">
+                            <div class="col col-4">
+                                <span class="label">Zip Code</span>                               
+                            </div>
+                            <div class="col col-6">
+                                <div class="choices__inner">                                   
+                                    <input type="text" id="zipCode" class="choices__input" name="zip-code" placeholder="Postal Code" maxlength="6" >  
+                                </div>
+                            </div>                          
+                        </div>                    
+                    </div>
+
+                    <div class="financial-section">
+                        <h4 class="section-title">Financial</h4>
+                        <div class="input-wrap">
+                            <div class="col col-4">                              
+                                <span class="label">Funding source</span>
+                            </div>
+                            <div class="col col-6">                                                            
+                            <input type="radio" id="Own" name="funding" value="own">
+                            <label for="Own">Own</label>
+                            <input type="radio" id="familyAndFriends" name="funding" value="Family & friends">
+                            <label for="familyAndFriends">Family & friends</label>
+                            <input type="radio" id="bank" name="funding" value="Bank Loan">
+                            <label for="bank">Bank Loan</label>
+                            <input type="radio" id="external" name="funding" value="External investors">
+                            <label for="external">External investors</label>
+                            </div>                             
+                        </div>
+                        <div class="input-wrap">
+                            <div class="col col-4">                               
+                                <span class="label">Budget</span>
+                            </div>
+                            <div class="col col-6">
+                                <div class="choices__inner">
+                                    <select class="choices__input" name="budget" id="budget" >
+                                        <option value="">Select Budget</option>
+                                        <option value="1 crore to 2 crores">1 crore to 2 crores</option>
+                                        <option value="2 crores to 5 crores">2 crores to 5 crores</option>
+                                        <option value="5 crores to 10 crores">5 crores to 10 crores</option>
+                                        <option value="10 crores to 15 crores">10 crores to 15 crores</option>
+                                    </select> 
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+
+                    <div class="professional-section">
+                        <h4 class="section-title">Professional</h4>
+                        <div class="input-wrap">
+                            <div class="col col-4">       
+                                <span class="label">Company name</span>  
+                            </div>
+                            <div class="col col-6">
+                                <div class="choices__inner">
+                                    <input type="text" id="company" class="choices__input"  name="Company" placeholder="Company Name(optional)"> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrap">
+                            <div class="col col-4">                                                              
+                                <span class="label">Skills</span>
+                            </div>
+                            <div class="col col-6">
+                             <input 
+                                id="skills"
+                                type="text" 
+                                name="skills" 
+                                value="Marketing, Electronics, Culinary" 
+                                placeholder="Add a new skill" 
+                                > 
+                            </div>                           
+                        </div>
+                    </div>
+
+                </div>
+                <button type="submit" class="btn btn-green">Submit Data</button>
+            </form>
+        </div>
+
+        <div id="preview" style="visibility:hidden" class="form-preview"></div>
+    </div>
+
+   
+    <!-- js file -->
+    <script src="scripts.js"></script>
+</body>
+</html>
